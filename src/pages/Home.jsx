@@ -13,7 +13,7 @@ import therapist from "../assets/therapist.webp";
 
 function Home() {
     const handleAnimationComplete = () => {
-        console.log("All letters have animated!");
+        console.log("All letters have animated");
     };
 
     return (
