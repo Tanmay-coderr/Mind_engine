@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Ai from "./pages/Ai";
 import Helpline from "./pages/Helpline";
 import Footer from "./components/footer";
+import Test from "./pages/Test";
+import Result from "./pages/Result";
 function App(){
   return(<>
   <BrowserRouter>
@@ -12,6 +14,9 @@ function App(){
       <Route path="/home" element={<Home/>}></Route>
       <Route path="/helpline" element={<Helpline/>}></Route>
       <Route path="/ai" element={<Ai/>}></Route>
+      <Route path="/test" element={<Test />} />
+      <Route path="/result" element={<Result />} />
+
 
 
     </Routes>

@@ -21,7 +21,7 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="/home" className="hover:text-pink-400">Home</a></li>
             <li><a href="/test" className="hover:text-pink-400">Take a Test</a></li>
-            <li><a href="/courses" className="hover:text-pink-400">Courses</a></li>
+            <li><a href="/result" className="hover:text-pink-400">Courses</a></li>
             <li><a href="/Counselor" className="hover:text-pink-400">Connect with Therapist</a></li>
             
             <li><NavLink to="/Helpline" className="hover:text-pink-400">Helpline</NavLink></li>
@@ -53,7 +53,7 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
           <div className="flex gap-4">
-            <a href="mailto:support@mindcare.com" className="hover:text-pink-400">
+            <a href="mailto:support@mindengine.com" className="hover:text-pink-400">
               <Mail />
             </a>
             <a href="#" className="hover:text-pink-400">
@@ -72,7 +72,7 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="border-t  mt-10 pt-6 text-center text-sm text-gray-300">
         <p>
-          © {new Date().getFullYear()} MindCare. All rights reserved.  
+          © {new Date().getFullYear()} MindEngine. All rights reserved.  
           <span className="ml-2">
             <a href="/privacy" className="hover:text-pink-400">Privacy Policy</a> ·{" "}
             <a href="/terms" className="hover:text-pink-400">Terms</a> ·{" "}

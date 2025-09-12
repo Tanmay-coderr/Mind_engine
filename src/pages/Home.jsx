@@ -63,7 +63,7 @@ function Home() {
             {/* Info Section: AI Therapist */}
 
             {/* Info Section: AI Therapist */}
-            <div className="w-full mb-6 max-w-6xl bg-pink-500 rounded-2xl shadow-md flex flex-col md:flex-row hover:shadow-2xl hover:scale-110 transition duration-500 ease-in-out items-center md:items-start mt-12 p-4">
+            <div className="w-full mb-6 max-w-6xl bg-gradient-to-tl from-pink-700 to-pink-400 rounded-2xl shadow-md flex flex-col md:flex-row hover:shadow-2xl hover:scale-110 transition duration-500 ease-in-out items-center md:items-start mt-12 p-4">
                 {/* Left Side - Image */}
                 <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-4 md:mb-0">
                     <img
@@ -92,7 +92,7 @@ function Home() {
                     </p>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto mt-10 font-mono bg-green-500 hover:shadow-2xl hover:scale-110 transition duration-500 ease-in-out shadow-md rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start">
+            <div className="max-w-6xl mx-auto mt-10 font-mono bg-gradient-to-tl from-green-700 to-green-400 hover:shadow-2xl hover:scale-110 transition duration-500 ease-in-out shadow-md rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start">
                 {/* Left side: Description */}
                 <div className="md:w-2/3 w-full md:pr-8 mb-6 md:mb-0">
                     <h2 className="text-2xl text-white underline font-bold mb-4">CONNECT WITH A THERAPIST</h2>
