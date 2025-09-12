@@ -10,10 +10,14 @@ const CoursePage = ({ userId, course }) => {
   );
   const [expandedWeek, setExpandedWeek] = useState(null);
 
+  // Load progress from localStorage on mount
   useEffect(() => {
-    // fetchProgressFromDB(userId, course.id)
-    //   .then(data => setProgress(data))
-    //   .catch(() => console.log("No previous data"));
+    const savedProgress = localStorage.getItem(
+      `progress_${userId}_${course.id}`
+    );
+    if (savedProgress) {
+      setProgress(JSON.parse(savedProgress));
+    }
   }, [userId, course.id]);
 
   const handleTaskToggle = (weekIndex, taskIndex) => {
@@ -21,16 +25,21 @@ const CoursePage = ({ userId, course }) => {
     newProgress[weekIndex][taskIndex] = !newProgress[weekIndex][taskIndex];
     setProgress(newProgress);
 
+    // Save to localStorage
     const userProgressData = {
       userId,
       courseId: course.id,
       progress: newProgress,
     };
-    saveProgressToDB(userProgressData);
+    saveProgressToLocal(userProgressData);
   };
 
-  const saveProgressToDB = (data) => {
-    console.log("Ready to save to DB:", data);
+  const saveProgressToLocal = (data) => {
+    localStorage.setItem(
+      `progress_${data.userId}_${data.courseId}`,
+      JSON.stringify(data.progress)
+    );
+    console.log("Progress saved to localStorage ✅");
   };
 
   const completedTasks = progress.flat().filter(Boolean).length;
@@ -126,7 +135,9 @@ const CoursePage = ({ userId, course }) => {
               style={{ width: `${progressPercentage}%` }}
             ></div>
           </div>
-          <span className="mt-2 font-bold text-gray-700">{progressPercentage}% Completed</span>
+          <span className="mt-2 font-bold text-gray-700">
+            {progressPercentage}% Completed
+          </span>
         </div>
       </div>
     </div>

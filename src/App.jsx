@@ -10,6 +10,8 @@ import Careercourse from "./pages/Careercourse";
 import AcademicCourse from "./pages/AcademicCourse";
 import RelationshipCourse from "./pages/RelationshipCourse";
 import FinancialCourse from "./FinancialCourse";
+import SignupPage from "./pages/SignUp";
+import LoginPage from "./pages/Login";
 function App() {
   return (<>
     <BrowserRouter>
@@ -27,6 +29,9 @@ function App() {
         <Route path="/generalcourse" element={<GeneralCourse />} /> */}
         <Route path="/relationshipcourse" element={<RelationshipCourse />} />
         <Route path="/financialcourse" element={<FinancialCourse />} />
+         <Route path="/signup" element={<SignupPage />} />
+         <Route path="/login" element={<LoginPage />} />
+
 
 
 
