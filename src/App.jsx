@@ -12,6 +12,7 @@ import RelationshipCourse from "./pages/RelationshipCourse";
 import FinancialCourse from "./FinancialCourse";
 import SignupPage from "./pages/SignUp";
 import LoginPage from "./pages/Login";
+import Counselor from "./pages/Counselor";
 function App() {
   return (<>
     <BrowserRouter>
@@ -20,6 +21,9 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/helpline" element={<Helpline />}></Route>
         <Route path="/ai" element={<Ai />}></Route>
+        <Route path="/counselor" element={<Counselor />}></Route>
+
+
         <Route path="/test" element={<Test />} />
         <Route path="/result" element={<Result />} />
         <Route path="/careercourse" element={<Careercourse />} />
